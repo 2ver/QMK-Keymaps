@@ -224,6 +224,34 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record)
       return false;
       break;
 
+    case RCTL_T(KC_N):
+      if (record->tap.count > 0)
+          if (get_mods() & MOD_BIT(KC_RSHIFT))
+          {
+            {
+              unregister_mods(MOD_BIT(KC_RSHIFT));
+              tap_code(KC_E);
+              tap_code(KC_N);
+              add_mods(MOD_BIT(KC_RSHIFT));
+              return false;
+            }
+          }
+      return true;
+
+    case LCTL_T(KC_T):
+      if (record->tap.count > 0)
+      {
+        if (get_mods() & MOD_BIT(KC_LSHIFT))
+        {
+            unregister_mods(MOD_BIT(KC_LSHIFT));
+            tap_code(KC_S);
+            tap_code(KC_T);
+            add_mods(MOD_BIT(KC_LSHIFT));
+            return false;
+        }
+      }
+      return true;
+
     default:
       return true;
   }
