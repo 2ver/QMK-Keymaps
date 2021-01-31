@@ -265,7 +265,7 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record)
         case LGUI_T(KC_A):
             return TAPPING_TERM + 75;
         case RGUI_T(KC_O):
-            return TAPPING_TERM + 75;
+            return TAPPING_TERM + 100;
         case LCTL_T(KC_T):
             return TAPPING_TERM + 50;
         case RCTL_T(KC_N):
