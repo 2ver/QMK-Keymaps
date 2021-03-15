@@ -11,7 +11,7 @@
 #endif
 
 /* Homerow mod settings */
-#define TAPPING_TERM 170
+#define TAPPING_TERM 160
 #define TAPPING_TERM_PER_KEY
 #define IGNORE_MOD_TAP_INTERRUPT
 
